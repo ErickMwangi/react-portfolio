@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+.nav__toggler {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: none;
+  cursor: pointer;
+  z-index: 2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  .nav__menu {
+    display: none;
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #282c34;
+    z-index: 1;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .nav__item {
+    margin: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav__link {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+  }
+
+  .nav__link:hover {
+    color: #61dafb;
+  }
+
+  .nav__toggler {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .nav__toggler .line1,
+  .nav__toggler .line2,
+  .nav__toggler .line3,
+  .nav__toggler .line4 {
+    width: 3rem;
+    height: 0.3rem;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in;
+  }
+
+  .nav__toggler-active .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .nav__toggler-active .line2 {
+    opacity: 0;
+  }
+
+  .nav__toggler-active .line3 {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .nav__toggler-active .line4 {
+    transform: translate(-2px, -2px);
   }
 }

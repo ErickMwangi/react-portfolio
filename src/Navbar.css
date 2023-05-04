@@ -1,62 +1,80 @@
-*,
-*::after,
-*::before {
-    margin: 0;
-    box-sizing: border-box;
-}
-html{
-    font-size: 62.5%;
-}
-body {
-    font-size: 1.6rem;
-}
-li {
-    list-style: none;
-}
-a {
-    text-decoration: none;
-    color: darkgrey; 
-}
 .nav {
+    background-color: #282c34;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 8vh;
-    background: rgb(0, 48, 126)
-}
-.nav__brand {
-    text-transform: uppercase;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 50px;
+    font-size: 18px;
+    position: relative;
+  }
+  
+  .nav__brand {
+    color: white;
+    font-size: 24px;
     font-weight: bold;
-}
-.nav__menu{
-    display:flex;
+    text-decoration: none;
+  }
+  
+  .nav__menu {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    gap: 3rem;
-}
-.nav__toggler div {
-    width: 2.5rem;
-    height: 0.2rem;
-    margin: 0.4rem;
-    background: darkgrey;
-}
-.nav___toggler {
-    cursor: pointer;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav__item {
+    margin-left: 30px;
+  }
+  
+  .nav__link {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .nav__link:hover {
+    background-color: #61dafb;
+  }
+  
+  .nav__toggler {
     display: none;
-}
-
-@media screen and (max-width: 768px) {
-    .nav___toggler {
-        display: block
+  }
+  
+  @media (max-width: 768px) {
+    .nav__menu {
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      width: 100%;
+      height: calc(100% - 80px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #282c34;
+      transition: all 0.3s ease-in-out;
     }
-    .nav___menu {
-        position: fixed;
-        top: 7vh;
-        right: 0;
-        width: 50%;
-        height: 93v;
-        background: rgb(0, 48, 126);
-        flex-direction: column;
-        transform: translateX(100%)
+  
+    .nav__item {
+      margin: 10px 0;
+    }
+  
+    .nav__link {
+      display: block;
+    }
+  
+    .nav__toggler {
+      display: block;
+      position: absolute;
+      top: 25px;
+      right: 20px;
+      cursor: pointer;
+    }
+  
+    .nav__toggler span {
+      display: block;
     }
 }
