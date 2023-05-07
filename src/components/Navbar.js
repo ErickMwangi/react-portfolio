@@ -15,9 +15,9 @@ function Navbar() {
       <a href="#" className="nav__brand">ERICK</a>
       <ul className={active}>
         <li className="nav__item"><a href="#" className="nav__link">Home</a></li>
+        <li className="nav__item"><a href="#" className="nav__link">Portfolio</a></li>
         <li className="nav__item"><a href="#" className="nav__link">About</a></li>
         <li className="nav__item"><a href="#" className="nav__link">Skill</a></li>
-        <li className="nav__item"><a href="#" className="nav__link">Portfolio</a></li>
         <li className="nav__item"><a href="#" className="nav__link">Contact</a></li>
       </ul>
       <div onClick={navToggle} className={toggleIcon}>
